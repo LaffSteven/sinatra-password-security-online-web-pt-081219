@@ -16,8 +16,7 @@ class ApplicationController < Sinatra::Base
 		erb :signup
 	end
 
-	post "/signup" do
-		#your code here!
+	post "/signup" d
 		user = User.new(:username => params[:username], :password => params[:password])
 		
 		if user.save
@@ -32,7 +31,6 @@ class ApplicationController < Sinatra::Base
 	end
 
 	post "/login" do
-		#your code here!
 		user = User.find_by(:username => params[:username])
 		
 		if user && user.authenticate(:username => params[:password])
